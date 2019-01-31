@@ -1,0 +1,45 @@
+﻿@model AuthWebApp.Model.UserInfo
+
+@{
+    ViewData["Title"] = "Home Page";    
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Welcome @Model.NickName</h2>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>
+                Api Call Result: @if (@Model.ApiCallStatus == "Success")
+                {
+                    <span style="color:forestgreen"> @Model.ApiCallStatus </span>
+                }
+                else
+                {
+                    <span style="color:firebrick"> @Model.ApiCallStatus </span>
+                }
+            </h4>
+            <p>Job Title: @Model.Role <br/>
+               Job Description:  @Model.RoleDescription
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4><a asp-controller="home" asp-action="GetApi">Get All Values</a></h4>
+            <h4><a asp-controller="home" asp-action="PostApi">Post Values</a></h4>
+            <h4><a asp-controller="home" asp-action="DeleteApi" asp-route-id="1">Delete Values</a></h4>
+        </div>
+    </div>
+}
+else
+{
+    <h2>Log in to perform an action</h2>    
+}

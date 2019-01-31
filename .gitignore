@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+
+/AuthWebApplication/obj
+/AuthWebApplication/bin/Debug/netcoreapp2.1
+/AuthWebApplication/AuthWebApp.csproj.user
+/AuthWebApiCore/obj
+/AuthWebApiCore/bin/Debug
+/AuthWebApiCore/AuthWebApiCore.csproj.user
+/.vs
+/GameLib/obj
+/GameLib/bin/Debug/netcoreapp2.2
+/AuthWebApplication/bin/Debug/netcoreapp2.2
